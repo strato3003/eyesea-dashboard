@@ -2,8 +2,6 @@
 ## calculate qualif time for VG
 ```shell
 RLBSTART=$(date -d '2023-11-30T17:00:00' +%s)
-echo $RLBSTART
-1701363600
 RLBEND=$(date -d '2023-12-09T17:03:48' +%s)
 RLBTREF=$(($RLBEND - $RLBSTART))
 date -ud "@$RLBTREF" +"$(( $RLBTREF/3600/24 )) days %H hours %M minutes %S seconds"
